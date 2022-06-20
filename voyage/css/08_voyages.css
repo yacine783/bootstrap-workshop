@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Kufam:ital@1&family=Macondo&family=Odibee+Sans&family=Oleo+Script+Swash+Caps:wght@400;700&family=Playfair+Display:ital@1&family=Roboto+Flex:opsz,wght@8..144,200&display=swap');
+/* kufam de google font avec différentes graisse */
+
+html,body{
+    margin: 0;
+    /*retrait du margin prédéfinit pour eviter les différences de résultats sur lrs navigateurs */
+    padding: 0;
+    /* retrait du padding pour les mêmes raisons */
+    font-family: 'kufam', cursive;
+    /* on définit la police kufam qu'on à importè comme la police de base du document */
+    text-shadow: 1px 1px 2px #000000a6;
+    /* le texte étant blanc sur des couleurs le text shadow permet de la faire mieux  ressortir (x, y, dispersion, couleur */
+    /*  il est recommandé d'utiliser un générateur pour faire des tests et comprendre le fonctionnement */
+}
+/* ------------------------------------------------- */
+header{
+    /* Dèfinit un background color au cas où le gégradé ne soit pas pris en compte par le navigateur */
+    background: rgb(34, 193, 195);
+    /* red green blue possibilité d'opacité avec rgba(r,g,b,a opacity de 0 à 1  */
+    background: linear-gradient(0deg, rgba(34,193,195) 0%, rgba(45,253,149,0.681)100%);
+    /* deg fait aller de bas en haut, pourcentage à partir duquel commence le mélange ------ pourcentage auquel fini le mélange */
+    display: flex;
+    /* display offre plein de moyens d'agencer les blocs, il s'avère très utile également pour le responsive,voir aussi grid */
+    justify-content: space-between;
+    /* combiné avec display flex il agence les bloc enfants en les disposant aux extrémités du bloc  */
+    height: 90px;
+}
+/* https://cssgradient.io/ */
+.gradient{
+    display: inline-block;
+    /* pour pouvoir mettre les blocs les uns à la file des autres */
+    margin: 10px;/* margin sur l'axe des x et des y*/
+    height: 70px;/* fixe la taille pour qu'il fasse la même que l'image est dessus*/
+    width: 50px;
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.76) 0%, rgba(65, 65, 65, 0.198) 20%, rgfba(255, 255, 255, 0) 60%);
+    /* dégradé  derrière l'image donnant une impression d'ombre pour faire ressortir le logo 100% est le rayon total de la balise , on peut mettre circle à la place de ellipse */
+}
+.gradient img{
+    height: 70px;
+}
+h1{
+    display: inline-block;
+    /* pour pouvoir le mettre à cote du logo */
+    font-size: 1.5rem ;
+    color:aliceblue ;
+    vertical-align: 1.1em;
+    /* centre manuellement le titre au milieu du bloc (vertical) et bien en face du logo */
+}
+nav{
+    display: inline-block;
+    /* pour changer le comportament de la nav et la placer à l'aider du display flex space between */
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    display: inline;
+    /* dispose les items de la liste à la ligne */
+    list-style: none;
+    /* retir les puces devant les items */
+    margin: auto 2em;
+    /* espace les items */
+}
+nav ul li a{
+    text-decoration: none;
+    /* retire le soulignage des liens de la nav */
+    color: aliceblue;
+    font-size: 1.2rem;
+    font-weight: 500;
+    /* augmente la graisse de la typo à 500 */
+    line-height: 90px;
+    /* met la hauteur de ligne à 90px */
+}
+.banner{
+    background-color: rgba(34, 193, 195, 1);
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(99, 170, 166, 1);
+    /* box shadow pour chrome,safari, android */
+    -moz-box-shadow: 0px 5px 10px 0px rgba(99, 170, 166, 1);
+    /* box shadow pour mozilla */
+    box-shadow: 0px 5px 10px 0px rgba(99, 170, 166, 1);
+    border: 4px double white;
+    /* border de 4px en tout avec double trait blanc */
+    /*
+    compatibilitè navigateur
+    -o- pour opera
+    -moz- pour Gecko( mozzila)
+    -webkit- pour webkit (chrome, safari, android ...)
+    -ms- pour Microsoft (internet explorer)
+    -khtml-pour KHTML (Konqueror)
+    */
+}
+/* https://www.cssmatic.com/box-shadow */
+marquee{ /* balise html obsolète */
+    padding: 10px;
+    color: aliceblue;
+    text-shadow: 1px 1px 3px #000000a6; /* text shadow plus prononcé que les autres  */
+    letter-spacing: 2px; /* espace entre les lettres 2px */
+    word-spacing: 5px; /* espace entre les mots de 5px */
+    font-size: 1.2rem;
+}
+/* ---------------------------ARTICLES------------------------------------ */
+article{
+    width: 70%;/* largeur des articles  */
+    margin: 2em auto; /* espacés les uns de autres et placé au centre hotizontalement  */
+    display: flex;
+    justify-content: space-evenly;/* met des espace égaux etre les éléments enfants*/
+    border-radius: 15px;/* bords arrondis*/
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(99, 170,166 ,1 );
+    -moz-box-shadow: 0px 0px 10px 0px rgba(99, 170,166 ,1 );
+    box-shadow: 0px 0px 10px 0px rgba(99, 170,166 ,1 );/*ombre de la balise au centre sur x et y une diffusion de la couleur sur 10 pixels et une ombre nette de 0 */
+}
+article:first-of-type{/* cible la première balise de type article */
+    background: rgb(191, 129, 148 );
+    background: linear-gradient(0deg, rgba(191, 129, 148, 1) 0%, rgba(86, 166, 241) 100% );
+}
+article:nth-of-type(2){
+    /* cible la balise de type article */
+    background: rgb(97, 227, 194);
+    background: linear-gradient(0deg, rgba(94, 227, 194, 1) 0%, rgba(70,134,195,1) 100%);
+
+}
+
+article:last-of-type{
+    /* cible la derniere balise de type article*/
+    background: rgb(226, 132, 23);
+    background: linear-gradient(0deg, rgba(226, 132, 23, 1) 0%, rgba(92, 144, 181, 1) 75%);
+    /* pas 100% pour qu'il y ait unn peu moins jaune */
+}
+
+section{
+    width: 50%; /* chaque section prend la moitier de l'article */
+    text-align: center; /* aligne le contenu ou centre*/
+    margin: 2rem;
+}
+
+article .text{
+    border-radius: 15px;
+    color: aliceblue;
+}
+
+article:first-of-type .text{ /* cible la section de texte du premier article*/
+    text-align: left; /* aligne le texte à gauche */
+}
+
+article:last-of-type .text{/*pas section mais texte, cible la section de texte de dernier article*/
+    text-align: right;/* aligne le contenu a droite */
+}
+
+section.img{
+    margin: auto; /* centre l'image en hauteur et sur les cotés */
+}
+section img{
+    overflow: hidden;/* cacher l'image qui depasse des border radius*/
+    -webkit-overflow: hidden;
+    border-radius: 300px;/* mettre un border radius de la taille  en pixel de l'image pour faire un rond*/
+    width: 300px;
+    height: 300px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0.5 1em;
+    height: 90px;
+    background: rgb(45, 253, 149);
+    background: linear-gradient(0deg, rgba(45, 253, 149, 0.469)0%, rgba(34, 193, 1) 100%);
+    -moz-box-shadow: 0px -5px 10px 0px rgba(99, 170, 166, 1);
+    box-shadow: 0px -5px 10px 0px rgba(99, 170, 166, 1);
+    /* box shadow vert vers le haut  */
+}
+
+footer small{
+    margin: 0; 
+    padding: 0 1rem;
+    color: aliceblue;
+}
+
+.paiement i{
+    font-size: 1.4rem;
+    padding: 0em 0.4em;
+    color: aliceblue;
+    line-height: 90px;
+
+
+}
+
+@media screen and (max-width: 800px) {
+    nav ul li{
+        margin: auto 1rem;/* espace les items */
+    }
+    article{
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    section.img{
+        margin: 2rem auto 0;
+    }
+    footer small{
+        line-height: 150%
+    }
+    footer{
+        height: auto;
+        justify-content: center;
+    }
+    .paiement i{
+        line-height: 150%;
+    }
+}
+
+@media screen and(max-width: 650px){
+    nav{
+        margin: 1em;
+    }
+    nav u{
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li a{
+        line-height: 150%;
+        font-size: 1rem;
+        line-height: 30%;
+    }
+    section{
+        width: 100%;/* chaque section prend la moitié de l'article*/
+    }
+}

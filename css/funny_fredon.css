@@ -1,0 +1,77 @@
+tbody{
+    padding: 200px;
+}
+
+tr, td{
+    border: 1px solid black;
+}
+
+td{
+    width: 30px;
+    height: 30px;
+    border: 1px solid darkgray;
+}
+
+table{
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.blanc{
+    background-color: white;
+}
+
+.violet{
+    background-color:rgb(63, 25, 63);
+}
+
+.red{
+    background-color: red;
+}
+
+.maroon{
+    background-color: maroon;
+}
+
+.beige{
+    background-color: rgb(233, 233, 184);
+}
+
+.beige2{
+    background-color: rgb(151, 151, 113);
+}
+
+.green{
+    background-color: green;
+}
+
+.green2{
+    background-color: rgb(2, 34, 2);
+}
+
+.green3{
+    background-color: rgb(161, 252, 161);
+}
+
+.yellow{
+    background-color: rgb(199, 199, 76);
+}
+
+.yellow2{
+    background-color: rgb(255, 255, 0);
+}
+.blue{
+    background-color: blue;
+}
+
+.aqua{
+    background-color: rgb(12, 165, 165);
+}
+
+.blue2{
+    background-attachment: rgb(0, 255, 255);
+}
+
+.aqua2{
+    background-color: aquamarine;
+}
